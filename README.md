@@ -1,1 +1,1 @@
-# moodle-local_gradereport
+# Grade Report Plugin
