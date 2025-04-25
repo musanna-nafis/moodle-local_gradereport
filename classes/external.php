@@ -5,10 +5,7 @@ require_once($CFG->dirroot . "/local/gradereport/locallib.php");
 
 
 class local_gradereport_external extends external_api {
-    /**
-     * Returns description of method parameters.
-     * @return external_function_parameters
-     */
+
     public static function delete_record_by_id_parameters(): external_function_parameters {
         return new external_function_parameters(
             array(
@@ -16,14 +13,6 @@ class local_gradereport_external extends external_api {
             )
         );
     }
-
-    /**
-     * Delete score by id function.
-     *
-     * @param int $scoreid
-     * @return array
-     * @throws moodle_exception
-     */
     public static function delete_record_by_id(int $recordid): array {
         global $DB;
 
@@ -37,11 +26,6 @@ class local_gradereport_external extends external_api {
         );
 
     }
-
-    /**
-     * Returns description of method result value.
-     * @return external_description
-     */
     public static function delete_record_by_id_returns() {
         return new external_single_structure(
             array(
